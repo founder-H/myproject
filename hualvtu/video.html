@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/swiper.css"/>
+    <script src="js/jquery.js"></script>
+    <script src="js/mui.min.js"></script>
+    <script src="js/swiper.jquery.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+	<style>
+		body,html{
+			margin: 0;padding: 0;width: 100%;height:100%;
+			background:#333333;
+		}
+		*{
+			margin: 0;padding: 0;box-sizing: border-box;
+		}
+		/*头部*/
+		.logo{
+			width: 100%;
+			height: 1.5rem;
+			background: #333333;
+			position: fixed;
+			top: 0;
+			z-index: 3;
+		}
+		.touxiang{
+			width: 1rem;
+			height: 1rem;
+			border-radius: 100%;
+			float: left;
+			margin-top: 0.3rem;
+			margin-left: 0.1rem;
+		}
+		.touxiang a{
+			width:100%;
+			height:100%;
+			display:block;
+			background:url(img/fanhui.svg)no-repeat center center;
+			background-size:80% 80%;
+		}
+		.title{
+			width: 4.5rem;
+			height: 100%;
+			position: absolute;
+			left:0;
+			right:0;
+			margin: auto;
+			float: left;
+		}
+		.title h1{
+			width:100%;
+			height:1rem;
+			display:block;
+			font-size:0.5rem;
+			text-align:center;
+			line-height:1rem;
+			color:#00FFFF;
+			margin:0;
+			padding:0;
+		}
+		.title .zuozhe{
+			width:100%;
+			height:0.5rem;
+		}
+		.title .zuozhe p{
+			width:1.2rem;
+			height:100%;
+			display:block;
+			float:left;
+			font-size:0.25rem;
+			margin:0;
+			padding:0;
+			text-align:center;
+			line-height:0.5rem;
+		}
+		.title .zuozhe span{
+			width:0.2rem;
+			height:100%;
+			display:block;
+			float: left;
+			font-size:0.25rem;
+			margin:0;
+			padding:0;
+			text-align:center;
+			line-height:0.5rem;
+			color:#00FFFF;
+		}
+		.box{
+			width:100%;
+			height:100%;
+		}
+		video{
+			width:100%;
+			height:100%;
+		}
+	</style>
+</head>
+<body>
+	<!--头部logo栏-->
+	<div class="logo">
+		<div class="touxiang">
+			<a href="shouye.html"></a>
+		</div>
+        <div class="title">
+        	<h1>北海樱花道</h1>
+        	<div class="zuozhe">
+        		<p>misszhao</p>
+        		<span></span>
+        		<p>视频</p>
+        		<span></span>
+        		<p>2015.06.21</p>
+        	</div>
+        </div>	
+	</div>
+	<!--头部logo栏结束-->
+	<!--视频栏-->
+	<div class="box">
+		<video src="video/lili1.mp4" controls="controls"  autoplay>
+       </video>
+	</div>
+	<!--视频栏结束-->
+</body>
+<script>
+	function resize (originSize,type){
+        var type=type ||"x" ;
+        var widths=document.documentElement.clientWidth;
+        var heights=document.documentElement.clientHeight;
+        if(type=="x"){
+            var scale=widths/originSize*100;
+        }else if(type=="y"){
+            var scale=heights/originSize*100;
+        }
+        
+        document.getElementsByTagName("html")[0].style.fontSize=scale+"px";
+
+    }
+
+  window.onload=function(){
+         resize(1334,"y");
+         
+  }
+</script>
+</html>

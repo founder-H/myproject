@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>分类栏</title>
+	<style>
+	    body,html{
+			margin: 0;padding: 0;width: 100%;height:100%;
+			background:#333333;
+		}
+		*{
+			margin: 0;padding: 0;box-sizing: border-box;
+		}
+		/*头部*/
+		.logo{
+			width: 100%;
+			height: 1.5rem;
+			background: #333333;
+			position: fixed;
+			top: 0;
+			z-index: 3;
+		}
+		.touxiang{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/touxiang.png);
+			background-size:100% 100%;
+			border-radius: 100%;
+			float: left;
+			margin-top: 0.3rem;
+			margin-left: 0.1rem;
+		}
+		.title{
+			width: 4rem;
+			height: 100%;
+			background: url(img/logo1.png);
+			background-size:100% 100%;
+			position: absolute;
+			left:0;
+			right:0;
+			margin: auto;
+			float: left;
+		}
+		/*底部栏*/
+		.footer{
+			width: 100%;height: 1rem;
+			position: fixed;left: 0;bottom: 0;
+			background: #333333;
+		}
+		.shouye{
+			width: 25%;
+			height: 100%;
+			float: left;
+			position: relative;
+		}
+		.fenlei{
+			width: 25%;
+			height: 100%;
+			float: left;
+			position: relative;
+		}
+		.sousuo{
+			width: 25%;
+			height: 100%;
+			float: left;
+			position: relative;
+		}
+		.yonghu{
+			width: 25%;
+			height:100%;
+			float: left;
+			position: relative;
+		}
+		.aa{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/gongneng1.png);
+			background-size:100% 100%;
+			display: block;
+			position: absolute;
+			left:0;right:0;
+			margin: auto;
+		}
+		.bb{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/gongneng2.png);
+			background-size:100% 100%;
+			display: block;
+			position: absolute;
+			left:0;right:0;
+			margin: auto;
+		}
+		.cc{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/gongneng3.png);
+			background-size:100% 100%;
+			display: block;
+			position: absolute;
+			left:0;right:0;
+			margin: auto;
+		}
+		.dd{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/gongneng4.png);
+			background-size:100% 100%;
+			display: block;
+			position: absolute;
+			left:0;right:0;
+			margin: auto;
+		}
+		/*正文栏*/
+		.box{
+			width: 100%;
+			height: 13rem;
+			background: #333333;
+		}
+		.lilin{
+			width:100%;
+			height:3rem;
+		}
+		.lilin:nth-child(1){
+			margin-top: 1.5rem;
+			background: url(img/fenlei1.png);
+			background-size:100% 100%;
+		}
+		.lilin:nth-child(2){
+			background: url(img/fenlei2.png);
+			background-size:100% 100%;
+		}
+		.lilin:nth-child(3){
+			background: url(img/fenlei3.png);
+			background-size:100% 100%;
+		}
+		.lilin:nth-child(4){
+			background: url(img/fenlei4.png);
+			background-size:100% 100%;
+		}
+		.lilinleft{
+			width: 35%;
+			height:100%;
+			background: rgba(0,0,0,0.5);
+			float: left;
+			border-right: 1px solid #EFEFF4;
+		}
+		.lilinright{
+			width: 65%;
+			height:100%;
+			background: rgba(0,0,0,0.5);
+			float: left;
+			position: relative;
+		}
+		.lilinright a{
+			width:100%;
+			height:100%;
+			display:block;
+		}
+		.lilinleft h1{
+			width: 3rem;
+			height: 0.6rem;
+			display: block;
+			font-size:0.4rem;
+			color: #FFFFFF;
+			margin-top:0.4rem;
+		}
+		.lilinleft p{
+			width: 2rem;
+			height: 1.8rem;
+			font-size:0.2rem;
+			color: #FFFFFF;
+			margin-left: 0.4rem;
+			text-indent:2em;
+		}
+		.spooitigr,.spooitigr1,.spooitigr2,.spooitigr3{
+			width: 3rem;
+			height: 3rem;
+			position: absolute;
+			left:0;
+			right:0;
+			margin: auto;
+		}
+		.spooitigr{
+			background: url(img/lilin1.png);
+			background-size:100% 100%;
+		}
+		.spooitigr1{
+			background: url(img/lilin2.png);
+			background-size:100% 100%;
+		}
+		.spooitigr2{
+			background: url(img/lilin3.png);
+			background-size:100% 100%;
+		}
+		.spooitigr3{
+			background: url(img/lilin4.png);
+			background-size:100% 100%;
+		}
+	</style>
+</head>
+<body>
+<!--头部logo栏-->
+	<div class="logo">
+		<div class="touxiang"></div>
+        <div class="title"></div>	
+	</div>
+<!--头部logo栏结束-->
+    <div class="box">
+    	<div class="lilin">
+    		<div class="lilinleft">
+    			<h1>高清大图</h1>
+    			<p>超过千万张图片,你会惊叹名山大泽的浩瀚,也会迷离炫彩繁华的都市,无论你在哪里,我们都在这里</p>
+    		</div>
+    		<div class="lilinright">
+    			<a href="fenleibox.html">
+    			<div class="spooitigr"></div>
+    			</a>
+    		</div>
+    	</div>
+    	<div class="lilin">
+    	<div class="lilinleft">
+    			<h1>闪拍一下</h1>
+    			<p>是不是总在感慨没有时间？有万千用户实拍美景，邀君共赏</p>
+    		</div>
+    		<div class="lilinright">
+    			<a href="fenleibox.html">
+    			<div class="spooitigr1"></div>
+    			</a>
+    		</div></div>
+    	<div class="lilin">
+    		<div class="lilinleft">
+    			<h1>守夜人讨论区</h1>
+    			<p>一段旅行，一段故事，人生路上不断的风景，也没完的故事</p>
+    		</div>
+    		<div class="lilinright">
+    			<a href="luntamoban.html">
+    			<div class="spooitigr2"></div>
+    			</a>
+    		</div>
+    	</div>
+    	<div class="lilin">
+    		<div class="lilinleft">
+    			<h1>秘籍收录</h1>
+    			<p>众多美景繁华之地详细攻略，给你留更多的时间，开心玩乐</p>
+    		</div>
+    		<div class="lilinright">
+    			<a href="taolunqumoban.html">
+    			<div class="spooitigr3"></div>
+    			</a>
+    		</div>
+    	</div>
+    </div>
+<!--底部分页栏-->
+	<div class="footer">
+		<div class="shouye">
+			<a href="shouye.html" class="aa"></a>
+		</div>
+		<div class="fenlei">
+			<a href="fenlei.html" class="bb"></a>
+		</div>
+		<div class="sousuo">
+			<a href="sousuo.html" class="cc"></a>
+		</div>
+		<div class="yonghu">
+			<a href="yonghu.html" class="dd"></a>
+		</div>
+	</div>
+<!--底部分页栏结束-->
+</body>
+<script>
+	function resize (originSize,type){
+        var type=type ||"x" ;
+        var widths=document.documentElement.clientWidth;
+        var heights=document.documentElement.clientHeight;
+        if(type=="x"){
+            var scale=widths/originSize*100;
+        }else if(type=="y"){
+            var scale=heights/originSize*100;
+        }
+        
+        document.getElementsByTagName("html")[0].style.fontSize=scale+"px";
+
+    }
+
+  window.onload=function(){
+         resize(1334,"y");
+         
+   }
+</script>
+</html>

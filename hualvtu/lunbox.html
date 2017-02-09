@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="js/jquery.js"></script>
+	<style>
+		body,html{
+			margin: 0;padding: 0;width: 100%;height:100%;
+			background:#333333;
+		}
+		*{
+			margin: 0;padding: 0;box-sizing: border-box;
+		}
+		/*头部*/
+		.logo{
+			width: 100%;
+			height: 1.5rem;
+			background: #333333;
+			position: fixed;
+			top: 0;
+			z-index: 3;
+		}
+		.touxiang{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/fanhui.svg)no-repeat center center;
+			background-size:80% 80%;
+			border-radius: 100%;
+			float: left;
+			margin-top: 0.3rem;
+			margin-left: 0.1rem;
+		}
+		.title{
+			width: 4rem;
+			height: 100%;
+			background: url(img/logo1.png);
+			background-size:100% 100%;
+			position: absolute;
+			left:0;
+			right:0;
+			margin: auto;
+			float: left;
+		}
+		.box{
+			width:100%;
+			height:100%;
+			background:#333333;
+		}
+		.boxtitle{
+			width:100%;
+			height:4rem;
+			margin-top:1.5rem;
+		}
+		.ccda{
+			width:100%;
+			height:1.5rem;
+		}
+		.ccda .toubu{
+			width:20%;
+			height:100%;
+			display:block;
+			text-decoration: none;
+			position:relative;
+			margin:0;padding:0;
+			float:left;
+		}
+		.ccda .toubu img{
+			float:left;
+	        width:1rem;
+	        height:1rem;
+	        position:absolute;
+	        left:0;top:0;bottom:0;right:0;
+	        margin:auto;
+	        border-radius:100%;
+		}
+		.config{
+			width:80%;height:100%;float:left;
+		}
+		.configcc{
+			width:100%;height:0.5rem;
+		}
+		.config h1{
+			width:100%;height:1rem;font-size:0.4rem;line-height:1rem;		
+		}
+		.configcc a{
+			float:left;
+			text-decoration:none;
+			color:orange;
+			font-size:0.3rem;
+			line-height:0.5rem;
+		}
+		.configcc p{
+			float:left;
+			font-size:0.28rem;
+			line-height:0.5rem;
+			display:block;
+			color:#cecece;
+		}
+		.configcc p:nth-child(3){
+			margin-left:0.1rem;
+		}
+		.miaoshu{
+			width:100%;
+			height:2.5rem;
+		}
+		.miaoshu p{
+			font-size:0.28rem;
+			text-indent:2em;
+			color:#9a9a9a;
+			overflow:hidden;
+		}
+		/*一楼*/
+		.oneself{
+			width:100%;
+			display: inline-block;
+			height:line-height;
+		}
+		.oneselfleft{
+			width:20%;
+			height:auto;
+			float:left;
+			position:relative;
+		}
+		.oneselfleft img{
+			width:1rem;height:1rem;position:absolute;
+			left:0;right:0;top:0.2rem;margin:auto;
+			border-radius:100%;
+		}
+		.oneselfright{
+			width:80%;
+			height:auto;
+			float:right;
+			border-bottom:1px solid #666666;
+		}
+		.contitle{
+			width:100%;
+			height:0.8rem;
+			position:relative;
+		}
+		.contitle a{
+			float:left;
+			text-decoration:none;
+			color:orange;
+			font-size:0.3rem;
+			line-height:0.8rem;
+		}
+		.contitle p{
+			float:left;
+			font-size:0.28rem;
+			line-height:0.8rem;
+			display:block;
+			color:#cecece;
+			position:absolute;
+			right:0.8rem;
+		}
+		.oneselfright p{
+			font-size:0.3rem;
+			color:#9a9a9a;
+			text-indent:2em;
+		}
+		.configrcc{
+			width:100%;
+			height:0.8rem;
+		}
+		.configrcc p{
+			float:left;
+			font-size:0.28rem;
+			line-height:0.8rem;
+			display:block;
+			color:#cecece;
+		}
+		.configrcc p:nth-child(2){
+			margin-left:0.5rem;
+		}
+		.configrcc span{
+			width:0.8rem;
+			height:0.8rem;
+			background: url(img/huifu.svg)no-repeat center center;
+			background-size:60% 60%;
+			float:right;
+		}
+		.ccfoimg{
+			width:100%;
+			height:4rem;
+			position:relative;
+		}
+		.ccfoimgss{
+			width:100%;
+			height:8rem;
+			position:relative;
+		}
+		.ccfoimgss img{
+			width:80%;
+			height:80%;
+			position:absolute;
+			left:0;right:0;bottom:0;top:0;
+			margin:auto;
+		}
+		.ccfoimg img{
+			width:80%;
+			height:80%;
+			position:absolute;
+			left:0;right:0;bottom:0;top:0;
+			margin:auto;
+		}
+	</style>
+</head>
+<body>
+<!--头部logo栏-->
+	<div class="logo">
+		<a href="luntamoban.html">
+		<div class="touxiang"></div>
+		</a>
+        <div class="title"></div>	
+	</div>
+<!--头部logo栏结束-->
+<!--正文开始-->
+	<div class="box">
+		<div class="boxtitle">
+			<div class="ccda">
+				<a href="" class="toubu">
+					<img src="img/a2.jpg"/>
+				</a>
+				<div class="config">
+					<div class="configcc">
+						<a href="">青青子衿,悠悠我心</a><!--用户名-->
+						<p>2016-11-13</p><!--时间-->
+						<p>09:23</p>
+						<p>楼主</p>
+						<p></p>
+					</div>
+					<h1>一月初云南行，募集队友</h1>
+				</div>
+			</div>
+			<div class="miaoshu">
+				<p>楼主现在在去大理的路上，昨天到达大理无量山樱花谷，看了美景，思来想去还是分享出来…曾经有大把的时间，你也有大把的爱去做点什么，后来就慢慢变懒了，如果你不能放弃一些，就出去走走吧，看看这个美丽的世界，在路上，一直前行...</p>
+			</div>
+		</div>
+		<div class="oneself">
+			<div class="oneselfleft">
+				<img src="img/a3.jpg" alt="" />
+			</div>
+			<div class="oneselfright">
+				<div class="contitle">
+					<a href="">时光小巷的少女与猫</a>
+					<p>2楼</p>
+				</div>
+				<p>阳光从树枝的空隙里倾泻下来，反射出太阳的剪影。枝头的花朵，羞答答的露出个肩头。抱着本书，坐在树荫下，凝望着广场上奔跑的人群，开始自己的遨游.在熟悉的城市，熟悉的街道上，看熟悉的风景，身旁依然有着熟悉的人，这一霎，是静谧，是幸福。都说平凡才是真正的快乐，但为什么我还会有一种怅然若失的情绪。曾有过，一个人，背着只属于自己的旅行包，站在徐州的大街上。陌生的街头，擦身而过的陌生人，看陌生的繁华，陌生的风景。</p>
+				<div class="configrcc">
+					<p>2016-11-13</p>
+					<p>11:26</p>
+					<span></span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="oneself">
+			<div class="oneselfleft">
+				<img src="img/a5.jpg" alt="" />
+			</div>
+			<div class="oneselfright">
+				<div class="contitle">
+					<a href="">此品余生共白首</a>
+					<p>3楼</p>
+				</div>
+				<p>阳光从树枝的空隙里倾泻下来，反射出太阳的剪影。枝头的花朵，羞答答的露出个肩头。</p>
+				<div class="configrcc">
+					<p>2016-11-13</p>
+					<p>14:55</p>
+					<span></span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="oneself">
+			<div class="oneselfleft">
+				<img src="img/a4.jpg" alt="" />
+			</div>
+			<div class="oneselfright">
+				<div class="contitle">
+					<a href="">爱未央小坏</a>
+					<p>4楼</p>
+				</div>
+				<div class="ccfoimg">
+					<img src="img/4.jpg" alt="" />
+				</div>
+				<p>世事一场大梦，人生几度秋凉？夜来风叶已鸣廊。</p>
+				<div class="configrcc">
+					<p>2016-11-13</p>
+					<p>18:03</p>
+					<span></span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="oneself">
+			<div class="oneselfleft">
+				<img src="img/a8.jpg" alt="" />
+			</div>
+			<div class="oneselfright">
+				<div class="contitle">
+					<a href="">茶蘼</a>
+					<p>5楼</p>
+				</div>
+				<p>你说忽晴忽雨的江湖，总有人过着你过不上的生活，带着行李和自己一个人在流浪。繁花似锦的梦都好似一纸空谈，谁可以笑着说着无所谓，谁又可以豪豪洒洒抛开一切去行走，孤独的滋味，像一杯烈酒，醉生梦死。
+					<br>
+不管前路的灯光是否会照亮你前行的路，就算你背后的身影寂寥单只。但总会有人亦步亦趋的跟着，看看你的世界，那将会是他的世界。<br>
+晚安<br>
+醉心人儿<br>
+我是一头来自深海九千九百九十九米的一条黑龙</p>
+				<div class="configrcc">
+					<p>2016-11-13</p>
+					<p>20:46</p>
+					<span></span>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<div class="oneself">
+			<div class="oneselfleft">
+				<img src="img/a7.png" alt="" />
+			</div>
+			<div class="oneselfright">
+				<div class="contitle">
+					<a href="">灬半夏半暖半倾城</a>
+					<p>6楼</p>
+				</div>
+				<div class="ccfoimgss">
+					<img src="images/aa.JPG" alt="" />
+				</div>
+				<p>世事一场大梦，人生几度秋凉？夜来风叶已鸣廊。</p>
+				<div class="configrcc">
+					<p>2016-11-13</p>
+					<p>11:26</p>
+					<span></span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="oneself">
+			<div class="oneselfleft">
+				<img src="img/a6.jpeg" alt="" />
+			</div>
+			<div class="oneselfright">
+				<div class="contitle">
+					<a href="">我是绿柠檬i</a>
+					<p>7楼</p>
+				</div>
+				<p>你我疲倦如旅人-并肩涉过遥遥风景-终于像临了这一扇空门-世事一场大梦，人生几度秋凉？夜来风叶已鸣廊。</p>
+				<div class="configrcc">
+					<p>2016-11-13</p>
+					<p>23:53</p>
+					<span></span>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="oneself">
+			<div class="oneselfleft">
+				<img src="img/touxiang.png" alt="" />
+			</div>
+			<div class="oneselfright">
+				<div class="contitle">
+					<a href="">念之森蓝@</a>
+					<p>8楼</p>
+				</div>
+				<p>你是不是想要放弃了？对啊。这么久了，当然想要放弃了。你自己看，为什么人和人都不一样呢。曾经我一直觉得，只要我付出就一定会得到回报，后来我失望了，这是个骗人的笑话。这个世界从来都是一步一步的把你逼入绝境。害怕交朋友，害怕说话交流，只想一个人待着。曾经忘记谁说过，很多事，你一直做就会疲累，不管是工作还是生活，我觉得累了。管他呢，爱咋咋。勿忘初心就好</p>
+				<div class="configrcc">
+					<p>2016-11-13</p>
+					<p>23:53</p>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	function resize (originSize,type){
+        var type=type ||"x" ;
+        var widths=document.documentElement.clientWidth;
+        var heights=document.documentElement.clientHeight;
+        if(type=="x"){
+            var scale=widths/originSize*100;
+        }else if(type=="y"){
+            var scale=heights/originSize*100;
+        }
+        
+        document.getElementsByTagName("html")[0].style.fontSize=scale+"px";
+
+    }
+
+  window.onload=function(){
+         resize(1334,"y");
+         
+   }
+</script>
+</html>

@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>分类盒子</title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/swiper.css"/>
+    <script src="js/jquery.js"></script>
+    <script src="js/mui.min.js"></script>
+    <script src="js/swiper.jquery.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+    </script>
+	<style>
+	body,html{
+			margin: 0;padding: 0;width: 100%;height:100%;
+			background:#333333;
+		}
+		*{
+			margin: 0;padding: 0;box-sizing: border-box;
+		}
+		/*头部*/
+		.logo{
+			width: 100%;
+			height: 1.5rem;
+			background: #333333;
+			position: fixed;
+			top: 0;
+			z-index: 3;
+		}
+		.touxiang{
+			width: 1rem;
+			height: 1rem;
+			border-radius: 100%;
+			float: left;
+			margin-top: 0.3rem;
+			margin-left: 0.1rem;
+		}
+		.touxiang a{
+			width:100%;
+			height:100%;
+			display:block;
+			background:url(img/fanhui.svg)no-repeat center center;
+			background-size:80% 80%;
+		}
+		.title{
+			width: 4.5rem;
+			height: 100%;
+			position: absolute;
+			left:0;
+			right:0;
+			margin: auto;
+			float: left;
+		}
+		.title h1{
+			width:100%;
+			height:1rem;
+			display:block;
+			font-size:0.5rem;
+			text-align:center;
+			line-height:1rem;
+			color:#00FFFF;
+			margin:0;
+			padding:0;
+		}
+		.title .zuozhe{
+			width:100%;
+			height:0.5rem;
+		}
+		.title .zuozhe p{
+			width:1.2rem;
+			height:100%;
+			display:block;
+			float:left;
+			font-size:0.25rem;
+			margin:0;
+			padding:0;
+			text-align:center;
+			line-height:0.5rem;
+		}
+		.title .zuozhe span{
+			width:0.2rem;
+			height:100%;
+			display:block;
+			float: left;
+			font-size:0.25rem;
+			margin:0;
+			padding:0;
+			text-align:center;
+			line-height:0.5rem;
+			color:#00FFFF;
+		}
+		/*底部栏*/
+		.footer{
+			width: 100%;height: 1rem;
+			position: fixed;left: 0;bottom: 0;
+			background: #333333;
+		}
+		.shouye{
+			width: 25%;
+			height: 100%;
+			float: left;
+			position: relative;
+		}
+		.fenlei{
+			width: 25%;
+			height: 100%;
+			float: left;
+			position: relative;
+		}
+		.sousuo{
+			width: 25%;
+			height: 100%;
+			float: left;
+			position: relative;
+		}
+		.yonghu{
+			width: 25%;
+			height:100%;
+			float: left;
+			position: relative;
+		}
+		.aa{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/gongneng1.png);
+			background-size:100% 100%;
+			display: block;
+			position: absolute;
+			left:0;right:0;
+			margin: auto;
+		}
+		.bb{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/gongneng2.png);
+			background-size:100% 100%;
+			display: block;
+			position: absolute;
+			left:0;right:0;
+			margin: auto;
+		}
+		.cc{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/gongneng3.png);
+			background-size:100% 100%;
+			display: block;
+			position: absolute;
+			left:0;right:0;
+			margin: auto;
+		}
+		.dd{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/gongneng4.png);
+			background-size:100% 100%;
+			display: block;
+			position: absolute;
+			left:0;right:0;
+			margin: auto;
+		}
+		/*图片栏*/
+		.box{
+			width:100%;
+			height:100%;
+		}
+		.swiper-container{
+			width:100%;
+			height:100%;
+		}
+		.swiper-slide{
+			width:6rem;
+			height:100%;
+		}
+		.swiper-slide{
+			position:relative;
+		}
+		.swiper-slide .llz{
+			width:100%;
+			height:2rem;
+			position:absolute;
+			bottom:1rem;
+		}
+		.swiper-slide .llz p{
+			width:100%;
+			height:100%;
+			color:#FFFFFF;
+			font-size:0.3rem;
+			overflow:hidden;
+			text-indent:2em;
+			padding-left:0.3rem;
+			padding-right:0.3rem;
+			display:block;
+			line-height:0.4rem;
+		}
+		.swiper-pagination{
+			color:#00FFFF;
+		}
+	</style>
+</head>
+<body>
+	<!--头部logo栏-->
+	<div class="logo">
+		<div class="touxiang">
+			<a href="shouye.html"></a>
+		</div>
+        <div class="title">
+        	<h1>文艺圣地鼓浪屿</h1>
+        	<div class="zuozhe">
+        		<p>misszhao</p>
+        		<span></span>
+        		<p>图片</p>
+        		<span></span>
+        		<p>2015.04.05</p>
+        	</div>
+        </div>	
+	</div>
+	<!--头部logo栏结束-->
+	<!--图片栏-->
+	<div class="box">
+		<div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                    <img src="images/gu1.JPG">
+                </div>
+                <div class="llz">
+                	<p>厦门鼓浪屿赵小姐的店，刚好我也姓赵。嘻嘻</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                    <img src="images/gu2.JPG">
+                </div>
+                <div class="llz">
+                	<p>佳人一笑</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                    <img src="images/gu3.JPG">
+                </div>
+                <div class="llz">
+                	<p>清晨的店外，起早早的过来买食物</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                    <img src="images/gu4.JPG">
+                </div>
+                <div class="llz">
+                	<p>猫叔叔</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                    <img src="images/gu5.JPG">
+                </div>
+                <div class="llz">
+                	<p>画功了得</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                    <img src="images/gu6.JPG">
+                </div>
+                <div class="llz">
+                	<p>呆了一下午，静静的发呆</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                    <img src="images/gu7.JPG">
+                </div>
+                <div class="llz">
+                	<p>百年好合</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                    <img src="images/gu8.JPG">
+                </div>
+                <div class="llz">
+                	<p>大哥要喝奶粉么  扑哧</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                    <img src="images/gu9.JPG">
+                </div>
+                <div class="llz">
+                	<p>三疯大叔</p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="swiper-zoom-container">
+                    <img src="images/gu10.JPG">
+                </div>
+                <div class="llz">
+                	<p>岁月静好</p>
+                </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-pagination-white"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    	</div>
+	</div>
+	<!--图片栏结束-->
+	<!--底部分页栏-->
+	<!--<div class="footer">
+		<div class="shouye">
+			<a href="shouye.html" class="aa"></a>
+		</div>
+		<div class="fenlei">
+			<a href="fenlei.html" class="bb"></a>
+		</div>
+		<div class="sousuo">
+			<a href="sousuo.html" class="cc"></a>
+		</div>
+		<div class="yonghu">
+			<a href="yonghu.html" class="dd"></a>
+		</div>
+	</div>-->
+<!--底部分页栏结束-->
+</body>
+<script>
+	function resize (originSize,type){
+        var type=type ||"x" ;
+        var widths=document.documentElement.clientWidth;
+        var heights=document.documentElement.clientHeight;
+        if(type=="x"){
+            var scale=widths/originSize*100;
+        }else if(type=="y"){
+            var scale=heights/originSize*100;
+        }
+        
+        document.getElementsByTagName("html")[0].style.fontSize=scale+"px";
+
+    }
+
+  window.onload=function(){
+         resize(1334,"y");
+         
+   }
+  var mySwiper = new Swiper('.swiper-container',{
+        zoom: true,
+        pagination: '.swiper-pagination',
+        paginationType : 'fraction',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev'
+})
+</script>
+</html>

@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>分类盒子</title>
+	<style>
+	body,html{
+			margin: 0;padding: 0;width: 100%;height:100%;
+			background:#333333;
+		}
+		*{
+			margin: 0;padding: 0;box-sizing: border-box;
+		}
+		/*头部*/
+		.logo{
+			width: 100%;
+			height: 1.5rem;
+			background: #333333;
+			position: fixed;
+			top: 0;
+			z-index: 3;
+		}
+		.touxiang{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/touxiang.png);
+			background-size:100% 100%;
+			border-radius: 100%;
+			float: left;
+			margin-top: 0.3rem;
+			margin-left: 0.1rem;
+		}
+		.title{
+			width: 4rem;
+			height: 100%;
+			background: url(img/logo1.png);
+			background-size:100% 100%;
+			position: absolute;
+			left:0;
+			right:0;
+			margin: auto;
+			float: left;
+		}
+		/*底部栏*/
+		.footer{
+			width: 100%;height: 1rem;
+			position: fixed;left: 0;bottom: 0;
+			background: #333333;
+		}
+		.shouye{
+			width: 25%;
+			height: 100%;
+			float: left;
+			position: relative;
+		}
+		.fenlei{
+			width: 25%;
+			height: 100%;
+			float: left;
+			position: relative;
+		}
+		.sousuo{
+			width: 25%;
+			height: 100%;
+			float: left;
+			position: relative;
+		}
+		.yonghu{
+			width: 25%;
+			height:100%;
+			float: left;
+			position: relative;
+		}
+		.aa{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/gongneng1.png);
+			background-size:100% 100%;
+			display: block;
+			position: absolute;
+			left:0;right:0;
+			margin: auto;
+		}
+		.bb{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/gongneng2.png);
+			background-size:100% 100%;
+			display: block;
+			position: absolute;
+			left:0;right:0;
+			margin: auto;
+		}
+		.cc{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/gongneng3.png);
+			background-size:100% 100%;
+			display: block;
+			position: absolute;
+			left:0;right:0;
+			margin: auto;
+		}
+		.dd{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/gongneng4.png);
+			background-size:100% 100%;
+			display: block;
+			position: absolute;
+			left:0;right:0;
+			margin: auto;
+		}
+		.box{
+			width:100%;
+			height:100%;
+		}
+		.luntan{
+			width:100%;
+			height:1rem;
+			margin-top:1.5rem;
+		}
+		.luntan form{
+			width:100%;
+			height:100%;
+			padding:0;
+			margin:0;
+		}
+		.luntanleft{
+			width:80%;
+			height:100%;
+			float:left;
+		}
+		.luntanleft input{
+			display:block;
+			width:100%;
+			height:100%;
+			border:0;
+			border-bottom:1px solid #00FFFF;
+			outline-style:none;
+			font-size:0.35rem;
+			color:#00FFFF;
+			padding-left:0.2rem;
+			background:none;
+		}
+		.luntanright{
+			width:20%;
+			height:100%;
+			float:left;
+		}
+		.luntanright input{
+			width:100%;
+			height:100%;
+			border:0;
+			background:#00FFFF;
+			color:#FFFFFF;
+            display:block;	
+            font-size:0.35rem;
+            outline-style:none;
+            border-radius:0%;
+        }
+        /*论坛分类模块开始*/
+       .forum{
+       		width:100%;
+       		height:6rem;
+       		border-bottom:1px solid #666666;
+       		margin-top:0.5rem;
+       }
+       .forumtop{
+       	width:100%;
+       	height:2rem;
+       }
+       .imgboxcc{
+       	width:20%;
+       	height:100%;
+       	position:relative;
+       	float:left;
+       }
+       .titledomebox{
+       	width:80%;
+       	height:100%;
+       	float:left;
+       }
+       .titledomebox a{
+       	width:100%;
+       	height:100%;
+       	display:block;
+       	text-decoration:none;
+       }
+       .imgboxcc a{
+       	width:100%;height:100%;
+       	text-decoration:none;
+       }
+       .imgboxcc img{
+       	width:1rem;
+       	height:1rem;
+       	position:absolute;
+       	left:0;top:0;right:0;bottom:0;
+       	margin:auto;
+       	border-radius:100%;
+       }
+       .imgboxcc p{
+       	width:100%;
+       	height:0.5rem;
+       	position:absolute;
+       	left:0;
+       	bottom:0;
+       	text-align:center;
+       	line-height:0.5rem;
+       	font-size:0.3rem;
+       	color:orange;
+       }
+       .titledomebox h1{
+       	width:100%;
+       	height:0.7rem;
+       	font-size:0.4rem;
+       	line-height:0.7rem;
+       	color:#B1B1B1;
+       }
+       .titledomebox p{
+       	width:100%;
+       	height:1.3rem;
+       	font-size:0.3rem;
+       	text-indent:2em;
+       	overflow:hidden;
+       	color:#B1B1B1;
+       }
+       .forumdome{
+       	width:100%;
+       	height:4rem;
+       	position:relative;
+       }
+       .forumdomeimgbox{
+       	width:7rem;
+       	height:3rem;
+       	position:absolute;
+       	left:0;top:-0.7rem;right:0;bottom:0;
+       	margin:auto;
+       }
+       .forumdomeimgbox a{
+       	width:100%;
+       	height:100%;
+       	display:block;
+       }
+       .forumdomeimgbox img{
+       	width:2rem;
+       	height:3rem;
+       	float:left;
+       }
+       .forumdomeimgbox img:nth-child(2){
+       	margin-left:0.5rem;
+       }
+       .forumdomeimgbox img:nth-child(3){
+       	margin-left:0.5rem;
+       }
+       .zhuanzai{
+       	width:80%;
+       	height:0.8rem;
+       	position:absolute;
+       	right:0;
+       	bottom:0;
+       	padding-left:2rem;
+       }
+       .zhuanzai p{
+       	float:left;
+       	font-size:0.35rem;
+       	line-height:0.8rem;
+       }
+       .zhuanzai span{
+       	float:left;
+       	width:0.8rem;
+       	height:0.8rem;
+       	background:url(img/pinglun.svg)no-repeat center center;
+       	background-size:60% 60%;
+       	margin-left:0.5rem;
+       }
+       .meme{
+       	width:100%;
+       	height:1rem;
+       	background:#333333;
+       }
+	</style>
+</head>
+<body>
+	<!--头部logo栏-->
+	<div class="logo">
+		<div class="touxiang"></div>
+        <div class="title"></div>	
+	</div>
+	<div class="box">
+		<!--论坛标题查询-->
+		<div class="luntan">
+			<form action="">
+				<div class="luntanleft">
+					<input type="text" placeholder="标题\作者...."/>
+				</div>
+				<div class="luntanright">
+					<input type="submit" value="查询" />
+				</div>
+			</form>
+		</div>
+		<!--论坛标题结束-->
+		<!--论坛分类开始-->
+		<div class="forum">
+			<div class="forumtop">
+				<div class="imgboxcc">
+					<a href="">
+					<img src="img/touxiang.png" alt="" />
+					<p>misszhao</p>
+					</a>
+				</div>
+				<div class="titledomebox">
+					<a href="lunbox.html">
+					<h1>一月初云南行，募集队友</h1>
+					<p>我在广州读大学，明年大四毕业准备一月初去云南，招募小伙伴，顺便求老司机推荐昆明大理丽江的青旅。拜谢</p>
+					</a>
+				</div>
+			</div>
+			<div class="forumdome">
+				<div class="forumdomeimgbox">
+					<a href="lunbox.html">
+					<img src="img/2.png" alt="" />
+					<img src="img/3.png" alt="" />
+					<img src="images/7.JPG" alt="" />
+					</a>
+				</div>
+				<div class="zhuanzai">
+					<p>2016.11.13</p>
+					<span></span>
+					<p>384562</p>
+				</div>
+			</div>
+		</div>
+		<!--论坛分类结束-->
+		<div class="forum">
+			<div class="forumtop">
+				<div class="imgboxcc">
+					<a href="">
+					<img src="img/a5.jpg" alt="" />
+					<p>sunshine</p>
+					</a>
+				</div>
+				<div class="titledomebox">
+					<a href="lunbox.html">
+					<h1>一月初云南行，募集队友</h1>
+					<p>我在广州读大学，明年大四毕业准备一月初去云南，招募小伙伴，顺便求老司机推荐昆明大理丽江的青旅。拜谢</p>
+					</a>
+				</div>
+			</div>
+			<div class="forumdome">
+				<div class="forumdomeimgbox">
+					<a href="lunbox.html">
+					<img src="img/2.png" alt="" />
+					<img src="img/3.png" alt="" />
+					<img src="images/7.JPG" alt="" />
+					</a>
+				</div>
+				<div class="zhuanzai">
+					<p>2016.11.13</p>
+					<span></span>
+					<p>384562</p>
+				</div>
+			</div>
+		</div>
+        <div class="forum">
+			<div class="forumtop">
+				<div class="imgboxcc">
+					<a href="">
+					<img src="img/a2.jpg" alt="" />
+					<p>玖月</p>
+					</a>
+				</div>
+				<div class="titledomebox">
+					<a href="lunbox.html">
+					<h1>一月初云南行，募集队友</h1>
+					<p>我在广州读大学，明年大四毕业准备一月初去云南，招募小伙伴，顺便求老司机推荐昆明大理丽江的青旅。拜谢</p>
+					</a>
+				</div>
+			</div>
+			<div class="forumdome">
+				<div class="forumdomeimgbox">
+					<a href="lunbox.html">
+					<img src="img/2.png" alt="" />
+					<img src="img/3.png" alt="" />
+					<img src="images/7.JPG" alt="" />
+					</a>
+				</div>
+				<div class="zhuanzai">
+					<p>2016.11.13</p>
+					<span></span>
+					<p>384562</p>
+				</div>
+			</div>
+		</div>	
+	    <div class="forum">
+			<div class="forumtop">
+				<div class="imgboxcc">
+					<a href="">
+					<img src="img/a3.jpg" alt="" />
+					<p>龙宝宝</p>
+					</a>
+				</div>
+				<div class="titledomebox">
+					<a href="lunbox.html">
+					<h1>一月初云南行，募集队友</h1>
+					<p>我在广州读大学，明年大四毕业准备一月初去云南，招募小伙伴，顺便求老司机推荐昆明大理丽江的青旅。拜谢</p>
+					</a>
+				</div>
+			</div>
+			<div class="forumdome">
+				<div class="forumdomeimgbox">
+					<a href="lunbox.html">
+					<img src="img/2.png" alt="" />
+					<img src="img/3.png" alt="" />
+					<img src="images/7.JPG" alt="" />
+					</a>
+				</div>
+				<div class="zhuanzai">
+					<p>2016.11.13</p>
+					<span></span>
+					<p>384562</p>
+				</div>
+			</div>
+		</div>
+	    <div class="forum">
+			<div class="forumtop">
+				<div class="imgboxcc">
+					<a href="">
+					<img src="img/a4.jpg" alt="" />
+					<p>小仙女</p>
+					</a>
+				</div>
+				<div class="titledomebox">
+					<a href="lunbox.html">
+					<h1>一月初云南行，募集队友</h1>
+					<p>我在广州读大学，明年大四毕业准备一月初去云南，招募小伙伴，顺便求老司机推荐昆明大理丽江的青旅。拜谢</p>
+					</a>
+				</div>
+			</div>
+			<div class="forumdome">
+				<div class="forumdomeimgbox">
+					<a href="lunbox.html">
+					<img src="img/2.png" alt="" />
+					<img src="img/3.png" alt="" />
+					<img src="images/7.JPG" alt="" />
+					</a>
+				</div>
+				<div class="zhuanzai">
+					<p>2016.11.13</p>
+					<span></span>
+					<p>384562</p>
+				</div>
+			</div>
+		</div>
+	    <div class="meme"></div>
+	</div>
+	<!--头部logo栏结束-->
+	<!--顶缸栏-->
+	<!--底部分页栏-->
+	<div class="footer">
+		<div class="shouye">
+			<a href="shouye.html" class="aa"></a>
+		</div>
+		<div class="fenlei">
+			<a href="fenlei.html" class="bb"></a>
+		</div>
+		<div class="sousuo">
+			<a href="sousuo.html" class="cc"></a>
+		</div>
+		<div class="yonghu">
+			<a href="yonghu.html" class="dd"></a>
+		</div>
+	</div>
+<!--底部分页栏结束-->
+</body>
+<script>
+	function resize (originSize,type){
+        var type=type ||"x" ;
+        var widths=document.documentElement.clientWidth;
+        var heights=document.documentElement.clientHeight;
+        if(type=="x"){
+            var scale=widths/originSize*100;
+        }else if(type=="y"){
+            var scale=heights/originSize*100;
+        }
+        
+        document.getElementsByTagName("html")[0].style.fontSize=scale+"px";
+
+    }
+
+  window.onload=function(){
+         resize(1334,"y");
+         
+   }
+</script>
+</html>

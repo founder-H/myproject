@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>分类栏</title>
+	<style>
+	    body,html{
+			margin: 0;padding: 0;width: 100%;height:100%;
+			background:#333333;
+		}
+		*{
+			margin: 0;padding: 0;box-sizing: border-box;
+		}
+		.box{
+			width:100%;
+			height:auto;
+			background:#333333;
+		}
+		/*头部*/
+		.logo{
+			width: 100%;
+			height: 1.5rem;
+			background: #333333;
+			position: relative;
+		}
+		.touxiang{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/touxiang.png);
+			background-size:100% 100%;
+			border-radius: 100%;
+			float: left;
+			margin-top: 0.3rem;
+			margin-left: 0.1rem;
+		}
+		.title{
+			width: 4rem;
+			height: 1.5rem;
+			background: url(img/logo1.png);
+			background-size:100% 100%;
+			position: absolute;
+			left:0;
+			right:0;
+			margin: auto;
+			float: left;
+		}
+		/*底部栏*/
+		.footer{
+			width: 100%;height: 1rem;
+			position: fixed;left: 0;bottom: 0;
+			background: #333333;
+		}
+		.shouye{
+			width: 25%;
+			height: 100%;
+			float: left;
+			position: relative;
+		}
+		.fenlei{
+			width: 25%;
+			height: 100%;
+			float: left;
+			position: relative;
+		}
+		.sousuo{
+			width: 25%;
+			height: 100%;
+			float: left;
+			position: relative;
+		}
+		.yonghu{
+			width: 25%;
+			height:100%;
+			float: left;
+			position: relative;
+		}
+		.aa{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/gongneng1.png);
+			background-size:100% 100%;
+			display: block;
+			position: absolute;
+			left:0;right:0;
+			margin: auto;
+		}
+		.bb{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/gongneng2.png);
+			background-size:100% 100%;
+			display: block;
+			position: absolute;
+			left:0;right:0;
+			margin: auto;
+		}
+		.cc{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/gongneng3.png);
+			background-size:100% 100%;
+			display: block;
+			position: absolute;
+			left:0;right:0;
+			margin: auto;
+		}
+		.dd{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/gongneng4.png);
+			background-size:100% 100%;
+			display: block;
+			position: absolute;
+			left:0;right:0;
+			margin: auto;
+		}
+		/*正文头像栏*/
+		.xiaolinzi{
+			width:100%;
+			height:4rem;
+			background:url(img/shanghai.jpg);
+			background-size:100% 100%;
+			position:relative;
+		}
+		.eally{
+			width:2rem;
+			height:2rem;
+			background:url(img/touxiang.png);
+			background-size:100% 100%;
+			position:absolute;
+			left:0;
+			right:0;
+			top:-1rem;
+			bottom:0;
+			margin:auto;
+			border-radius:100%;
+		}
+		.eallydome{
+			width:4rem;
+			height:0.6rem;
+			position: absolute;
+			left:0;
+			right:0;
+			margin:auto;
+			bottom:0.5rem;
+		}
+		.eallydome a{
+			width:100%;
+			height:100%;
+			float:left;
+			color:#00FFFF;
+			font-size:0.4rem;
+			text-decoration: none;
+			text-align: center;
+			display:block;
+			line-height:0.6rem;
+		}
+		.eallydome p{
+			float:left;
+			color:#00FFFF;
+			font-size:0.4rem;
+			padding-left:0.2rem;
+			padding-right:0.2rem;
+			display: none;
+		}
+		/*正文头像栏结束*/
+		/*功能栏*/
+		.misszhao{
+			width:100%;
+			height:10rem;
+		}
+		.missli{
+			width:100%;
+			height:1.5rem;
+			border-bottom:1px solid #555555;
+			position: relative;
+		}
+		.loop{
+			width: 6.5rem;
+			height: 1rem;
+			position: absolute;
+			left:0;top:0;right:0;
+			bottom:0;margin: auto;
+		}
+		.loopleft{
+			width: 1rem;
+			height: 1rem;
+			background:url(img/yonghu.svg)no-repeat center center;
+			background-size:70% 70%;
+			float:left;
+		}
+		.loopleft1{
+			width: 1rem;
+			height: 1rem;
+			background:url(img/shezhi.svg)no-repeat center center;
+			background-size:80% 80%;
+			float:left;
+		}
+		.loopleft2{
+			width: 1rem;
+			height: 1rem;
+			background:url(img/guanzhu.svg)no-repeat center center;
+			background-size:80% 80%;
+			float:left;
+		}
+		.loopleft3{
+			width: 1rem;
+			height: 1rem;
+			background:url(img/xiaoxi.svg)no-repeat center center;
+			background-size:55% 55%;
+			float:left;
+		}
+		.loopleft4{
+			width: 1rem;
+			height: 1rem;
+			background:url(img/lajitong.svg)no-repeat center center;
+			background-size:70% 70%;
+			float:left;
+		}
+		.loopleft5{
+			width: 1rem;
+			height: 1rem;
+			background:url(img/women.svg)no-repeat center center;
+			background-size:75% 75%;
+			float:left;
+		}
+		.loopright{
+			width:4rem;
+			height:1rem;
+			float:left;
+			margin-left:0.5rem; 
+		}
+		.loopright a{
+			width:100%;
+			height:100%;
+			display: block;
+			font-size:0.3rem;
+			color:#CDD4D8;
+			text-decoration: none;
+			line-height:1rem;
+		}
+		.loopjian{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/rightjian.svg)no-repeat 0.1rem 0.1rem;
+			background-size:80% 80%;
+			float: left;
+		}
+		/*功能结束*/
+	</style>
+</head>
+<body>
+<!--正文栏-->
+<div class="box">
+	<!--头部logo栏-->
+	<div class="logo">
+		<div class="touxiang"></div>
+        <div class="title"></div>	
+	</div>
+<!--头部logo栏结束-->
+    <!--正文头像栏-->
+    <div class="xiaolinzi">
+    	<div class="eally"></div>
+    	<div class="eallydome">
+    		<a href="login.html">请登录</a>
+    		<p>|</p>
+    		<p>退出登录</p>
+    	</div>
+    </div>
+    <!--正文头像栏结束-->
+    <div class="misszhao">
+    	<div class="missli">
+    		<div class="loop">
+    			<div class="loopleft"></div>
+    			<div class="loopright">
+    				<a href="">个人中心</a>
+    			</div>
+    			<div class="loopjian"></div>
+    		</div>
+    	</div>
+    	<div class="missli">
+    		<div class="loop">
+    			<div class="loopleft1"></div>
+    			<div class="loopright">
+    				<a href="">设置</a>
+    			</div>
+    			<div class="loopjian"></div>
+    		</div>
+    	</div>
+    	<div class="missli">
+    		<div class="loop">
+    			<div class="loopleft2"></div>
+    			<div class="loopright">
+    				<a href="">我的关注</a>
+    			</div>
+    			<div class="loopjian"></div>
+    		</div>
+    	</div>
+    	<div class="missli">
+    		<div class="loop">
+    			<div class="loopleft3"></div>
+    			<div class="loopright">
+    				<a href="">消息</a>
+    			</div>
+    			<div class="loopjian"></div>
+    		</div>
+    	</div>
+    	<div class="missli">
+    		<div class="loop">
+    			<div class="loopleft4"></div>
+    			<div class="loopright">
+    				<a href="">清理缓存</a>
+    			</div>
+    			<div class="loopjian"></div>
+    		</div>
+    	</div>
+    	<div class="missli">
+    	<div class="loop">
+    			<div class="loopleft5"></div>
+    			<div class="loopright">
+    				<a href="">关于我们</a>
+    			</div>
+    			<div class="loopjian"></div>
+    		</div></div>
+    </div>
+</div>
+<!--正文栏结束-->
+<!--底部分页栏-->
+	<div class="footer">
+		<div class="shouye">
+			<a href="shouye.html" class="aa"></a>
+		</div>
+		<div class="fenlei">
+			<a href="fenlei.html" class="bb"></a>
+		</div>
+		<div class="sousuo">
+			<a href="sousuo.html" class="cc"></a>
+		</div>
+		<div class="yonghu">
+			<a href="yonghu.html" class="dd"></a>
+		</div>
+	</div>
+<!--底部分页栏结束-->
+</body>
+<script>
+	function resize (originSize,type){
+        var type=type ||"x" ;
+        var widths=document.documentElement.clientWidth;
+        var heights=document.documentElement.clientHeight;
+        if(type=="x"){
+            var scale=widths/originSize*100;
+        }else if(type=="y"){
+            var scale=heights/originSize*100;
+        }
+        
+        document.getElementsByTagName("html")[0].style.fontSize=scale+"px";
+
+    }
+
+  window.onload=function(){
+         resize(1334,"y");
+         
+   }
+</script>
+</html>

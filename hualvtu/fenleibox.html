@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>分类盒子</title>
+	<script src="js/jquery.js"></script>
+	<script src="js/style.js"></script>
+	<script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/swiper.css"/>
+    <link rel="stylesheet" href="css/kuCity.css" />
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="js/swiper.jquery.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+    <script src="js/kuCity.js"></script>
+	<style>
+	body,html{
+			margin: 0;padding: 0;width: 100%;height:100%;background:#333333;
+		}
+		*{
+			margin: 0;padding: 0;box-sizing: border-box;
+		}
+		/*头部*/
+		.logo{
+			width: 100%;
+			height: 1.5rem;
+			background: #333333;
+			position: fixed;
+			top: 0;
+			z-index: 3;
+		}
+		.touxiang{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/touxiang.png);
+			background-size:100% 100%;
+			border-radius: 100%;
+			float: left;
+			margin-top: 0.3rem;
+			margin-left: 0.1rem;
+		}
+		.title{
+			width: 4rem;
+			height: 100%;
+			background: url(img/logo1.png);
+			background-size:100% 100%;
+			position: absolute;
+			left:0;
+			right:0;
+			margin: auto;
+			float: left;
+		}
+		/*底部栏*/
+		.footer{
+			width: 100%;height: 1rem;
+			position: fixed;left: 0;bottom: 0;
+			background: #333333;
+		}
+		.shouye{
+			width: 25%;
+			height: 100%;
+			float: left;
+			position: relative;
+		}
+		.fenlei{
+			width: 25%;
+			height: 100%;
+			float: left;
+			position: relative;
+		}
+		.sousuo{
+			width: 25%;
+			height: 100%;
+			float: left;
+			position: relative;
+		}
+		.yonghu{
+			width: 25%;
+			height:100%;
+			float: left;
+			position: relative;
+		}
+		.aa{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/gongneng1.png);
+			background-size:100% 100%;
+			display: block;
+			position: absolute;
+			left:0;right:0;
+			margin: auto;
+		}
+		.bb{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/gongneng2.png);
+			background-size:100% 100%;
+			display: block;
+			position: absolute;
+			left:0;right:0;
+			margin: auto;
+		}
+		.cc{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/gongneng3.png);
+			background-size:100% 100%;
+			display: block;
+			position: absolute;
+			left:0;right:0;
+			margin: auto;
+		}
+		.dd{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/gongneng4.png);
+			background-size:100% 100%;
+			display: block;
+			position: absolute;
+			left:0;right:0;
+			margin: auto;
+		}
+		.box{
+			width:100%;
+			height:auto;
+			background:#333333;
+		}
+		.yinqing{
+			width:100%;
+			height:1rem;
+			margin-top:1.5rem;
+		}
+		.yinqing1{
+			width:100%;
+			height:1rem;
+		}
+		/*弹出框*/
+		.wangrui{
+			width:100%;
+			height:1rem;
+		}
+		.wangrui input{
+			display:block;
+			float:left;
+			margin:0;
+			padding:0;
+		}
+		.wangrui input:nth-child(1){
+			width:80%;
+			height:1rem;
+			background:none;
+			border-bottom:1px solid #00FFFF;
+			border-top:1px solid #00FFFF;
+			float:left;
+			color:#00FFFF;
+			padding-left:0.2rem;
+			font-size:0.25rem;
+		}
+		.wangrui input:nth-child(2){
+			width:20%;
+			height:1rem;
+			background:#00FFFF;
+			border:0;
+			float:left;
+			font-size:0.3rem;
+		}
+		/*图片正文栏开始*/
+		.tupian{
+			width:100%;
+			height:5rem;
+			margin-top:0.2rem;
+		}
+		.tupian a{
+			width:100%;
+			height:100%;
+			display:block;
+			position:relative;
+		}
+		.tupian a img{
+			width:100%;
+			height:100%;
+		}
+		.tupian a h1{
+			width:5rem;
+			height:1rem;
+			position:absolute;
+			left:0;
+			right:0;
+			bottom:0.8rem;
+			margin:auto;
+			font-size:0.5rem;
+			color:#FFFFFF;
+			text-align:center;
+			line-height:1rem;
+			overflow:hidden;
+		}
+		/*图片正文栏结束*/
+	</style>
+</head>
+<body>
+	<!--头部logo栏-->
+	<div class="logo">
+		<div class="touxiang"></div>
+        <div class="title"></div>	
+	</div>
+	<!--头部logo栏结束-->
+	<!--正文栏-->
+	<!--正文栏结束-->
+	<div class="box">
+		<div class="yinqing">	
+		</div>
+		<!--查询框-->
+		<div class="wangrui">
+			<form action="">
+			<input type="text" name="" id="" value="" class="search3" placeholder="请输入城市\地区\景点..."/>
+			<input type="submit" />
+			</form>
+		</div>
+		<!--查询框结束-->
+		<div class="tupian">
+			<a href="imgbox.html">
+			<img src="img/1.jpg" alt="" />
+			<h1>马尔代夫迷幻之夜</h1>
+			</a>
+		</div>
+		<div class="tupian">
+			<a href="imgbox.html">
+			<img src="img/2.jpg" alt="" />
+			<h1>夜上海-东方明珠</h1>
+			</a>
+		</div>
+		<div class="tupian">
+			<a href="imgbox.html">
+			<img src="img/6.jpg" alt="" />
+			<h1>乌镇夜景醉梦江南</h1>
+			</a>
+		</div>
+		<div class="tupian">
+			<a href="imgbox.html">
+			<img src="img/5.jpg" alt="" />
+			<h1>勇攀古长城</h1>
+			</a>
+		</div>
+		<div class="tupian">
+			<a href="imgbox.html">
+			<img src="img/4.jpg" alt="" />
+			<h1>华山深秋</h1>
+			</a>
+		</div>
+		<div class="tupian">
+			<a href="imgbox.html">
+			<img src="img/3.jpg" alt="" />
+			<h1>富士山樱花</h1>
+			</a>
+		</div>
+		<div class="yinqing1">	
+		</div>
+	</div>
+	<!--底部分页栏-->
+	<div class="footer">
+		<div class="shouye">
+			<a href="shouye.html" class="aa"></a>
+		</div>
+		<div class="fenlei">
+			<a href="fenlei.html" class="bb"></a>
+		</div>
+		<div class="sousuo">
+			<a href="sousuo.html" class="cc"></a>
+		</div>
+		<div class="yonghu">
+			<a href="yonghu.html" class="dd"></a>
+		</div>
+	</div>
+<!--底部分页栏结束-->
+</body>
+<script>
+	function resize (originSize,type){
+        var type=type ||"x" ;
+        var widths=document.documentElement.clientWidth;
+        var heights=document.documentElement.clientHeight;
+        if(type=="x"){
+            var scale=widths/originSize*100;
+        }else if(type=="y"){
+            var scale=heights/originSize*100;
+        }
+        
+        document.getElementsByTagName("html")[0].style.fontSize=scale+"px";
+
+    }
+
+  window.onload=function(){
+         resize(1334,"y");
+         
+   }
+  var mySwiper = new Swiper('.swiper-container', {
+})
+</script>
+</html>

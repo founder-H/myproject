@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		body,html{
+			margin: 0;padding: 0;width: 100%;height:100%;
+			background:#333333;
+		}
+		*{
+			margin: 0;padding: 0;box-sizing: border-box;
+		}
+		/*头部*/
+		.logo{
+			width: 100%;
+			height: 1.5rem;
+			background: #333333;
+			position: fixed;
+			top: 0;
+			z-index: 3;
+		}
+		.touxiang{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/fanhui.svg)no-repeat center center;
+			background-size:80% 80%;
+			border-radius: 100%;
+			float: left;
+			margin-top: 0.3rem;
+			margin-left: 0.1rem;
+		}
+		.title{
+			width: 4rem;
+			height: 100%;
+			background: url(img/logo1.png);
+			background-size:100% 100%;
+			position: absolute;
+			left:0;
+			right:0;
+			margin: auto;
+			float: left;
+		}
+		.box{
+			width:100%;
+			height:100%;
+			background:#333333;
+		}
+		.titlels{
+			width:100%;height:2.6rem;
+			margin-top:1.5rem;
+		}
+		.titlels h1{
+			width:100%;height:0.8rem;
+			font-size:0.4rem;text-align:center;line-height:0.8rem;color:#BEBEBE;
+		}
+		.zuozhe{
+			width:100%;height:0.6rem;
+		}
+		.zuozhe a{
+			display:block;font-size:0.25rem;text-align: center;line-height: 0.6rem;color: orange;
+			text-decoration:none;
+		}
+		.xinxi{
+			display: flex;
+			-webkit-align-content: center;
+			justify-content: center;
+			-webkit-box-items:center ;
+			align-items: center;
+			width:100%;height:0.6rem;
+		}
+		.xinxison{ 
+			display:flex;
+			-webkit-align-content:start;
+			justify-content: flex-start;
+			justify-content: center;
+			-webkit-box-items:center ;
+			width: 4rem;
+		}
+		.xinxison p{
+			font-size:0.28rem;line-height:0.6rem;
+		}
+		.xinxison p:nth-child(2){
+			padding-left:0.1rem;
+			padding-right:0.1rem;
+		}
+		.music{
+			width:100%;height:0.6rem;
+			/*background:khaki;*/
+		}
+		.wenzhang{
+		    
+		}
+		.wenzhang p{
+			font-size:0.28rem;
+			padding:0.3rem;
+			color:#808080;
+		}
+		.pinglun{
+			width:100%;height:2rem;
+		}
+		.pingluntop{
+			width:100%;height:1.4rem;
+		}
+		.pingluntop input{
+			width:100%;height:100%;display:block;
+			background:#333333;border:1px solid #808080;
+			font-size:0.3rem;color:#00FFFF;
+			padding-left:0.3rem;
+		}
+		.pinglunbottom{
+			width:100%;height:0.6rem;
+		}
+		.huifu{
+			width:1.5rem;
+			height:100%;
+			float:right;
+			margin-right:0.3rem;
+		}
+		.huifu input{
+			width:100%;height:100%;border:0;display:block;
+		}
+		/*一楼*/
+		.oneself{
+			width:100%;
+			display: inline-block;
+			height:line-height;
+		}
+		.oneselfleft{
+			width:20%;
+			height:auto;
+			float:left;
+			position:relative;
+		}
+		.oneselfleft img{
+			width:1rem;height:1rem;position:absolute;
+			left:0;right:0;top:0.2rem;margin:auto;
+			border-radius:100%;
+		}
+		.oneselfright{
+			width:80%;
+			height:auto;
+			float:right;
+			border-bottom:1px solid #666666;
+		}
+		.contitle{
+			width:100%;
+			height:0.8rem;
+			position:relative;
+		}
+		.contitle a{
+			float:left;
+			text-decoration:none;
+			color:orange;
+			font-size:0.3rem;
+			line-height:0.8rem;
+		}
+		.contitle p{
+			float:left;
+			font-size:0.28rem;
+			line-height:0.8rem;
+			display:block;
+			color:#cecece;
+			position:absolute;
+			right:0.8rem;
+		}
+		.oneselfright p{
+			font-size:0.3rem;
+			color:#9a9a9a;
+			text-indent:2em;
+		}
+		.configrcc{
+			width:100%;
+			height:0.8rem;
+		}
+		.configrcc p{
+			float:left;
+			font-size:0.28rem;
+			line-height:0.8rem;
+			display:block;
+			color:#cecece;
+		}
+		.configrcc p:nth-child(2){
+			margin-left:0.5rem;
+		}
+		.configrcc span{
+			width:0.8rem;
+			height:0.8rem;
+			background: url(img/huifu.svg)no-repeat center center;
+			background-size:60% 60%;
+			float:right;
+		}
+		.ccfoimg{
+			width:100%;
+			height:4rem;
+			position:relative;
+		}
+		.ccfoimgss{
+			width:100%;
+			height:8rem;
+			position:relative;
+		}
+		.ccfoimgss img{
+			width:80%;
+			height:80%;
+			position:absolute;
+			left:0;right:0;bottom:0;top:0;
+			margin:auto;
+		}
+		.ccfoimg img{
+			width:80%;
+			height:80%;
+			position:absolute;
+			left:0;right:0;bottom:0;top:0;
+			margin:auto;
+		}
+	</style>
+</head>
+<body>
+	<!--头部logo栏-->
+	<div class="logo">
+		<a href="taolunqumoban.html">
+		<div class="touxiang"></div>
+		</a>
+        <div class="title"></div>	
+	</div>
+<!--头部logo栏结束-->
+	<div class="box">
+		<!--文章标题栏-->
+		<div class="titlels">
+			<h1>痒了七年的彩云之南</h1>
+			<div class="zuozhe"><a href="">青青子衿，悠悠我心</a></div>
+			<div class="xinxi">
+				<div class="xinxison">
+					<p>2016-11-13</p>
+					<p>|</p>
+					<p>攻略</p>
+				</div>
+			</div>
+			<div class="music"></div>
+		</div>
+		<div class="wenzhang">
+			<p>
+				第一次一个人的旅行，拉开序幕。<br>
+				D1：4.25  北京飞昆明  <br>
+				D2：4.26  昆明-下关-大理古城 <br>
+				D3：4.27  大理古城-双廊 <br>
+				D4：4.28  双廊-喜洲-大理古城 <br>
+				D5：4.29  大理古城-丽江(火车) <br>
+				D6：4.30  丽江-泸沽湖(长途汽车) <br>
+				D7：5.1   泸沽湖 <br>
+				D8：5.2   泸沽湖-丽江(长途汽车)<br>
+				D9：5.3   丽江 拉市海 束河 <br>
+				D10：5.4  丽江 <br>
+				D11：5.5  丽江-昆明(火车)<br>
+				D12：5.6  昆明飞北京<br>
+				花费约6000元。不计纪念品消费的话，约5000元。其中交通：2300
+住宿：1100 门票娱乐：600 食：1100<br>
+				交通:<br>
+大理交通很方便，虽然不论是火车还是长途的大理站都是下关，要去大理古城还得再倒车。但一个8路车几乎是全能的。长途车站附近、火车站附近都有它，去大理古城洋人街、人民路的，都可以乘坐8路直达	<br>
+大理去双廊也很方便，可以去下关坐车，也可以从古城坐2路车到南国城(好象叫这个名字)，也就是才村码头附近，去等路过此地的中巴。 这儿有时有回双廊的当地人开的小面，25元一位。
+ 
+从双廊去丽江也挺方便，可以坐中巴到江尾，再换乘去丽江的中巴。跟双廊-大理的中巴司机说你要换车去丽江，他会帮你联系司机，两车相遇的时候让你下车。
+ 
+丽江去泸沽湖的车挺多的，可以请客栈老板代订，一般的价格是160元往返。我吃了点亏，花了180元。订好之后司机会主动给你打电话，通知你集合的时间与地点。返程时一样，决定好哪天回程，提前一天告诉司机，他会通知你集合时间和地点。<br>
+住宿环境：<br><br>
+丽江客栈非常多，不愁住，位置好的价格高，位置太偏的就不要考虑了，尤其是想泡吧的，太晚回去没有路灯的。木府附近是不错的选择，价格不高、离四方街不远、背后就是忠义市场，可以体会当地人的生活。<br><br>
+在丽江，如逛景点需先缴纳古城维护费，否则通票也用不上。目前木府修缮，不开放。
+ 
+拉市海茶马古道骑马划船活动，有多条线路可选择，费用在180-580之间，我选择的是380的，价格砍到200，大约半日可完成。之后可以去束河逛逛，从束河正门进入，据说要收50元门票，而且要看古城维护费的缴费凭证，但查得不严。我是请司机送到束河侧面的小巷子进入的。
+ 
+丽江的客栈通常都有带客游玩的服务，一日游两日游都有，价格比较合理、服务也有保证。
+ 
+一个人去丽江的爱美姑娘，可以选择在古城拍写真，199两套服装，299三套服装，通常一套服装可以拍三四十张照片，主要看你跟摄影师的配合，只拍不修，拍完刻盘即走，回家盘打不开的，还可以再跟工作室的客服联系。我在光影故事拍的，承诺三套服装拍70张照片，最后拍了有一百多张。
+			</p>
+		</div>
+		<div class="pinglun">
+			<form action="">
+			<div class="pingluntop">
+				<input type="text" placeholder="请输入回复"/>
+			</div>
+			<div class="pinglunbottom">
+				<div class="huifu">
+					<input type="submit" name="" id="" value="提交" />
+				</div>
+			</div>
+			</form>
+		</div>
+		<div class="oneself">
+			<div class="oneselfleft">
+				<img src="img/a3.jpg" alt="" />
+			</div>
+			<div class="oneselfright">
+				<div class="contitle">
+					<a href="">时光小巷的少女与猫</a>
+					<p>2楼</p>
+				</div>
+				<p>阳光从树枝的空隙里倾泻下来，反射出太阳的剪影。枝头的花朵，羞答答的露出个肩头。抱着本书，坐在树荫下，凝望着广场上奔跑的人群，开始自己的遨游.在熟悉的城市，熟悉的街道上，看熟悉的风景，身旁依然有着熟悉的人，这一霎，是静谧，是幸福。都说平凡才是真正的快乐，但为什么我还会有一种怅然若失的情绪。曾有过，一个人，背着只属于自己的旅行包，站在徐州的大街上。陌生的街头，擦身而过的陌生人，看陌生的繁华，陌生的风景。</p>
+				<div class="configrcc">
+					<p>2016-11-13</p>
+					<p>11:26</p>
+					<span></span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="oneself">
+			<div class="oneselfleft">
+				<img src="img/a8.jpg" alt="" />
+			</div>
+			<div class="oneselfright">
+				<div class="contitle">
+					<a href="">茶蘼</a>
+					<p>3楼</p>
+				</div>
+				<p>你说忽晴忽雨的江湖，总有人过着你过不上的生活，带着行李和自己一个人在流浪。繁花似锦的梦都好似一纸空谈，谁可以笑着说着无所谓，谁又可以豪豪洒洒抛开一切去行走，孤独的滋味，像一杯烈酒，醉生梦死。
+					<br>
+不管前路的灯光是否会照亮你前行的路，就算你背后的身影寂寥单只。但总会有人亦步亦趋的跟着，看看你的世界，那将会是他的世界。<br>
+晚安<br>
+醉心人儿<br>
+我是一头来自深海九千九百九十九米的一条黑龙</p>
+				<div class="configrcc">
+					<p>2016-11-13</p>
+					<p>20:46</p>
+					<span></span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="oneself">
+			<div class="oneselfleft">
+				<img src="img/a9.jpg" alt="" />
+			</div>
+			<div class="oneselfright">
+				<div class="contitle">
+					<a href="">月慕寒</a>
+					<p>4楼</p>
+				</div>
+				<p>好棒</p>
+				<div class="configrcc">
+					<p>2016-11-13</p>
+					<p>20:46</p>
+					<span></span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="oneself">
+			<div class="oneselfleft">
+				<img src="img/a10.jpg" alt="" />
+			</div>
+			<div class="oneselfright">
+				<div class="contitle">
+					<a href="">李璟璘</a>
+					<p>5楼</p>
+				</div>
+				<p>中央空调，踏浪而行</p>
+				<div class="configrcc">
+					<p>2016-11-13</p>
+					<p>20:46</p>
+					<span></span>
+				</div>
+			</div>
+		</div>
+		
+		<div class="oneself">
+			<div class="oneselfleft">
+				<img src="img/a2.jpg" alt="" />
+			</div>
+			<div class="oneselfright">
+				<div class="contitle">
+					<a href="">赵思琪</a>
+					<p>6楼</p>
+				</div>
+				<p>妈妈我再也不挑食了</p>
+				<div class="configrcc">
+					<p>2016-11-13</p>
+					<p>20:46</p>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	function resize (originSize,type){
+        var type=type ||"x" ;
+        var widths=document.documentElement.clientWidth;
+        var heights=document.documentElement.clientHeight;
+        if(type=="x"){
+            var scale=widths/originSize*100;
+        }else if(type=="y"){
+            var scale=heights/originSize*100;
+        }
+        
+        document.getElementsByTagName("html")[0].style.fontSize=scale+"px";
+
+    }
+
+  window.onload=function(){
+         resize(1334,"y");
+         
+   }
+</script>
+</html>

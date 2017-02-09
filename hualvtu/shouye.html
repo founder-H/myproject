@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/swiper.css"/>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script src="js/swiper.jquery.min.js"></script>
+    <script src="js/swiper.animate1.0.2.min.js"></script>
+	<style>
+		body,html{
+			margin: 0;padding: 0;width: 100%;height:100%;
+			background:#333333;
+		}
+		*{
+			margin: 0;padding: 0;box-sizing: border-box;
+		}
+		/*头部*/
+		.logo{
+			width: 100%;
+			height: 1.5rem;
+			background: #333333;
+			position: fixed;
+			top: 0;
+			z-index: 3;
+		}
+		.touxiang{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/touxiang.png);
+			background-size:100% 100%;
+			border-radius: 100%;
+			float: left;
+			margin-top: 0.3rem; 
+			margin-left: 0.1rem;
+		}
+		.title{
+			width: 4rem;
+			height: 100%;
+			background: url(img/logo1.png);
+			background-size:100% 100%;
+			position: absolute;
+			left:0;
+			right:0;
+			margin: auto;
+			float: left;
+		}
+		.box{
+			width: 100%;
+			height: auto;
+			background:#333333;
+		}
+		.banner{
+			width:100%;
+			height:5rem;
+			margin-top: 1.5rem;
+		}
+		.swiper-container{
+			width: 100%;
+			height:100%;
+		}
+		.swiper-wrapper{
+			width: 100%;
+			height:100%;
+		}
+		.swiper-slide{
+			width: 100%;
+			height:100%;
+		}
+		.bg1{
+			width: 100%;
+			height: 100%;
+			background: url(img/bg1.png);
+			background-size:100% 100%;
+			display: block;
+		}
+		.bg2{
+			width: 100%;
+			height: 100%;
+			background: url(img/bg2.png);
+			background-size:100% 100%;
+			display: block;
+		}
+		.bg3{
+			width: 100%;
+			height: 100%;
+			background: url(img/bg3.png);
+			background-size:100% 100%;
+			display: block;
+		}
+		/*正文栏*/
+		.domebox{
+			width: 100%;
+			height:17rem;
+		}
+		.dome{
+			width: 100%;
+			height:4rem;
+			border-bottom: 1px dashed #FFFFFF;
+		}
+		.dome1{
+			width: 100%;
+			height:4rem;
+			border-bottom: 1px dashed #FFFFFF;
+		}
+		.dome2{
+			width: 100%;
+			height:4rem;
+			border-bottom: 1px dashed #FFFFFF;
+		}
+		.dome3{
+			width: 100%;
+			height:4rem;
+			border-bottom: 1px dashed #FFFFFF;
+		}
+		.domeleft{
+			width: 50%;
+			height:100%;
+			background: #333333;
+			float: left;
+			position: relative;
+		}
+		.domeleft a{
+			width: 100%;
+			height:100%;
+			display: block;
+		}
+		.domeleft a img{
+			width: 3rem;
+			height:3rem;
+			position: absolute;
+			left:0;
+			top:0;
+			right:0;
+			bottom:0;
+			margin: auto;
+		}
+		.domeleft .pofang{
+			width: 1rem;
+			height:1rem;
+			background:url(img/bofang.svg);
+			background-size:100% 100%;
+			position: absolute;
+			top:0;
+			left:0;
+			right:0;
+			bottom:0;
+			margin: auto;
+		} 
+		.domeright{
+			width: 50%;
+			height:100%;
+			float: left;
+			background: #333333;
+		}
+		.domeright h1{
+			width: 3.4rem;
+			height:0.6rem;
+			font-size: 0.4rem;
+			margin: 0;
+			padding-left: 0.2rem;
+			line-height: 0.8rem;
+		}
+		.domeright h1 a{
+			color:#FFFFFF;
+			text-decoration: none;
+		}
+		.domeright .miss{
+			width: 3.4rem;
+			height: 0.5rem;
+			margin-left: 0.3rem;
+			border-bottom: 1px solid #666666;
+		}
+		.domeright .miss h3{
+			font-size: 0.2rem;
+			float: left;
+			line-height: 0.5rem;
+			margin: 0;
+			padding: 0;
+		}
+		.domeright .miss p{
+			font-size: 0.2rem;
+			float: left;
+			line-height: 0.5rem;
+			margin: 0;
+			padding: 0;
+		}
+		.misszhao{
+			width: 3.4rem;
+			height:2rem;
+			border-bottom: 1px solid #666666;
+			margin-left: 0.3rem;
+			font-size: 0.2rem;
+			text-indent:2em;
+			line-height: 2;
+			overflow: hidden;
+			color:#808080;
+		}
+		.zan{
+			width: 3.4rem;
+			height: 0.6rem;
+			margin-left: 0.3rem;
+			margin-top: 0.2rem;
+		}
+		.zan p{
+			margin: 0;
+			padding: 0;
+			width: 0.7rem;
+			height: 100%;
+			float: left;
+			font-size:0.2rem;
+			line-height: 0.6rem;
+		}
+		.xin{
+			width: 0.6rem;
+			height: 0.6rem;
+			background: url(img/aixin.svg)no-repeat;
+			background-size:80% 80%;
+			float: left;
+		}
+		.pinglun{
+			width: 0.6rem;
+			height: 0.6rem;
+			background: url(img/pinglun.svg)no-repeat;
+			background-size:80% 80%;
+			float: left;
+		}
+		.zhuanfa{
+			width: 0.6rem;
+			height: 0.6rem;
+			float: left;
+			margin-left:0.2rem;
+		}
+		.zhuanfa a{
+			width: 100%;
+			height: 100%;
+			display: block;
+			background: url(img/zhuanfa.svg)no-repeat;
+			background-size:80% 80%;
+		}
+		/*底部栏*/
+		.footer{
+			width: 100%;height: 1rem;
+			position: fixed;left: 0;bottom: 0;
+			background: #333333;
+		}
+		.shouye{
+			width: 25%;
+			height: 100%;
+			float: left;
+			position: relative;
+		}
+		.fenlei{
+			width: 25%;
+			height: 100%;
+			float: left;
+			position: relative;
+		}
+		.sousuo{
+			width: 25%;
+			height: 100%;
+			float: left;
+			position: relative;
+		}
+		.yonghu{
+			width: 25%;
+			height:100%;
+			float: left;
+			position: relative;
+		}
+		.aa{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/gongneng1.png);
+			background-size:100% 100%;
+			display: block;
+			position: absolute;
+			left:0;right:0;
+			margin: auto;
+		}
+		.bb{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/gongneng2.png);
+			background-size:100% 100%;
+			display: block;
+			position: absolute;
+			left:0;right:0;
+			margin: auto;
+		}
+		.cc{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/gongneng3.png);
+			background-size:100% 100%;
+			display: block;
+			position: absolute;
+			left:0;right:0;
+			margin: auto;
+		}
+		.dd{
+			width: 1rem;
+			height: 1rem;
+			background: url(img/gongneng4.png);
+			background-size:100% 100%;
+			display: block;
+			position: absolute;
+			left:0;right:0;
+			margin: auto;
+		}
+	</style>
+</head>
+<body>
+	<!--头部logo栏-->
+	<div class="logo">
+		<div class="touxiang"></div>
+        <div class="title"></div>	
+	</div>
+	<!--头部logo栏结束-->
+	<!--首页正文栏-->
+	<div class="box">
+		<div class="banner">
+			<div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                    	<a href="zhaomiss.html" class="bg1"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="zhaomiss.html" class="bg2"></a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="zhaomiss.html" class="bg3"></a>
+                    </div>
+                </div>
+                <div class="swiper-scrollbar"></div>
+            </div>
+		</div>
+		<div class="domebox">
+		<div class="dome">
+			<div class="domeleft">
+				<a href="">
+				<img src="img/9.png" alt="" />
+				</a>
+			</div>
+			<div class="domeright">
+				<h1><a href="zhaomiss.html">梦的天堂</a></h1>
+				<div class="miss">
+					<h3>zhaomiss</h3>
+					<p>| 图集 </p>
+					<p>| 2016.11.13</p>
+				</div>
+				<div class="misszhao">站在海边看大海，水之清，沙之幼，抬头远望有几处岛屿映入视野。天和海远眺就是没有分界线的。椰林婆娑，摆出各种各样媚人的姿态。肆意开放的三角梅自由的徜徉着，鲜艳欲滴的木棉花在风中绽放。沁凉的海水拍打着我的脚。“哗――”裙边似的海浪打上了沙滩，潮水退回去了，白色的裙边便在一瞬间化作一匹银白色的绸缎，铺满了沙滩……</div>
+				<div class="zan">
+					<div class="xin"></div>
+					<p>10324</p>
+					<div class="pinglun"></div>
+					<p>32064</p>
+					<div class="zhuanfa">
+						<a href=""></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	    <div class="dome1">
+	    	<div class="domeleft">
+	    		<a href="video.html">
+	    			<img src="img/10.png" alt="" />
+	    			<div class="pofang"></div>
+	    		</a>
+	    	</div>
+	    	<div class="domeright">
+				<h1><a href="video.html">梦的天堂</a></h1>
+				<div class="miss">
+					<h3>zhaomiss</h3>
+					<p>| 视频 </p>
+					<p> | 2016.11.13</p>
+				</div>
+				<div class="misszhao">站在海边看大海，水之清，沙之幼，抬头远望有几处岛屿映入视野。天和海远眺就是没有分界线的。椰林婆娑，摆出各种各样媚人的姿态。肆意开放的三角梅自由的徜徉着，鲜艳欲滴的木棉花在风中绽放。沁凉的海水拍打着我的脚。“哗――”裙边似的海浪打上了沙滩，潮水退回去了，白色的裙边便在一瞬间化作一匹银白色的绸缎，铺满了沙滩……</div>
+				<div class="zan">
+					<div class="xin"></div>
+					<p>10324</p>
+					<div class="pinglun"></div>
+					<p>32064</p>
+					<div class="zhuanfa">
+						<a href=""></a>
+					</div>
+				</div>
+			</div>
+	    </div>
+	    <div class="dome2">
+	    	<div class="domeleft">
+	    		<a href="lunbox.html">
+	    			<img src="img/12.png" alt="" />
+	    		</a>
+	    	</div>
+	    	<div class="domeright">
+				<h1><a href="lunbox.html">梦的天堂</a></h1>
+				<div class="miss">
+					<h3>zhaomiss</h3>
+					<p>| 论坛 </p>
+					<p> | 2016.11.13</p>
+				</div>
+				<div class="misszhao">站在海边看大海，水之清，沙之幼，抬头远望有几处岛屿映入视野。天和海远眺就是没有分界线的。椰林婆娑，摆出各种各样媚人的姿态。肆意开放的三角梅自由的徜徉着，鲜艳欲滴的木棉花在风中绽放。沁凉的海水拍打着我的脚。“哗――”裙边似的海浪打上了沙滩，潮水退回去了，白色的裙边便在一瞬间化作一匹银白色的绸缎，铺满了沙滩……</div>
+				<div class="zan">
+					<div class="xin"></div>
+					<p>10324</p>
+					<div class="pinglun"></div>
+					<p>32064</p>
+					<div class="zhuanfa">
+						<a href=""></a>
+					</div>
+				</div>
+			</div>
+	    </div>
+		<div class="dome3">
+			<div class="domeleft">
+	    		<a href="taolunqumoban.html">
+	    			<img src="img/11.png" alt="" />
+	    		</a>
+	    	</div>
+	    	<div class="domeright">
+				<h1><a href="taolunqumoban.html">梦的天堂</a></h1>
+				<div class="miss">
+					<h3>zhaomiss</h3>
+					<p>| 攻略 </p>
+					<p> | 2016.11.13</p>
+				</div>
+				<div class="misszhao">站在海边看大海，水之清，沙之幼，抬头远望有几处岛屿映入视野。天和海远眺就是没有分界线的。椰林婆娑，摆出各种各样媚人的姿态。肆意开放的三角梅自由的徜徉着，鲜艳欲滴的木棉花在风中绽放。沁凉的海水拍打着我的脚。“哗――”裙边似的海浪打上了沙滩，潮水退回去了，白色的裙边便在一瞬间化作一匹银白色的绸缎，铺满了沙滩……</div>
+				<div class="zan">
+					<div class="xin"></div>
+					<p>10324</p>
+					<div class="pinglun"></div>
+					<p>32064</p>
+					<div class="zhuanfa">
+						<a href=""></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+    </div>
+<!--底部分页栏-->
+	<div class="footer">
+		<div class="shouye">
+			<a href="shouye.html" class="aa"></a>
+		</div>
+		<div class="fenlei">
+			<a href="fenlei.html" class="bb"></a>
+		</div>
+		<div class="sousuo">
+			<a href="sousuo.html" class="cc"></a>
+		</div>
+		<div class="yonghu">
+			<a href="yonghu.html" class="dd"></a>
+		</div>
+	</div>
+<!--底部分页栏结束-->
+</body>
+<script>
+	function resize (originSize,type){
+        var type=type ||"x" ;
+        var widths=document.documentElement.clientWidth;
+        var heights=document.documentElement.clientHeight;
+        if(type=="x"){
+            var scale=widths/originSize*100;
+        }else if(type=="y"){
+            var scale=heights/originSize*100;
+        }
+        
+        document.getElementsByTagName("html")[0].style.fontSize=scale+"px";
+
+    }
+
+  window.onload=function(){
+         resize(1334,"y");
+         
+   }
+  var mySwiper = new Swiper('.swiper-container', {
+	autoplay: 2000,//可选选项，自动滑动
+	scrollbar:'.swiper-scrollbar' ,
+    scrollbarHide:false,
+  })
+</script>
+</html>
