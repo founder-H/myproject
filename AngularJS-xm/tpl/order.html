@@ -1,0 +1,27 @@
+<div ng-include="'tpl/include/header.html'"></div>
+    <div class="container">
+        <div class="order-box center-block">
+                <form action="">
+                    <div class="form-group">
+                        <label for="uName">联系人：</label>
+                        <input class="form-control" id="uname" name="uname" type="text"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="usex">性别：</label><br/>
+                        <input id="usex" name="sex" type="radio" checked/>男
+                        <input id="usex" name="sex" type="radio"/>女
+                    </div>
+                    <div class="form-group">
+                        <label for="utel">联系电话：</label>
+                        <input class="form-control" id="utel" name="utel" type="tel"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="dz">送餐地址：</label><br/>
+                        <textarea id="dz" name="dz" cols="40" rows="5"></textarea>
+                    </div>
+                </form>
+            <a class="btn btn-success btn-block" href="#myOrder">确认下单</a>
+        </div>
+
+    </div>
+<div ng-include="'tpl/include/footer.html'"></div>
